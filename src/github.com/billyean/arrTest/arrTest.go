@@ -4,6 +4,8 @@ import (
 	"fmt"
 )
 
+// Note Go is pass by value, it doesn't change original
+// object.
 func printer(w []string) {
 	for _, word := range w {
 		fmt.Printf("%s,", word)
@@ -12,7 +14,7 @@ func printer(w []string) {
 	w[2] = "blue"
 }
 
-// Leetcode's exercise. Note this doesn't have boundary checking.
+// LeetCode's exercise. Note this doesn't have boundary checking.
 // https://leetcode.com/problems/counting-bits/
 func count(n int) []int {
 	var bits []int
