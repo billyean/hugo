@@ -14,4 +14,5 @@ const (
 func main() {
 	b := 65
 	fmt.Printf("it's %c\n", b)
+	fmt.Printf(message, name, name3)
 }
