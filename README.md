@@ -11,7 +11,7 @@ go install github.com/billyean/arrTest
 go install github.com/billyean/channel
 go install github.com/billyean/helloworld
 ```
-
+##### Add a couple of LeetCode exercises
 ##### Fundamental go language grammer.
 * Const
 * auto type detect.
