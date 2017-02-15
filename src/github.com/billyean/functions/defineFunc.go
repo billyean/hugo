@@ -4,6 +4,15 @@ import (
 	"fmt"
 )
 
+type Salutation struct {
+    name string
+    greeting string
+}
+
+func greet(salutation Salutation) {
+	fmt.Printf("%s %s", salutation.greeting, salutation.name)
+}
+
 // I am extremely no happy that abs(int) is not a supported
 // function in Go, I also noticed people are talking it's not
 // worth to be added since it's too generic.
@@ -34,4 +43,7 @@ func main() {
 	fmt.Printf("%d is %spower of four\n", 16, isPowerOfFour(16))
 	fmt.Printf("%d is %spower of four\n", 32, isPowerOfFour(32))
 	fmt.Printf("%d is %spower of four\n", -65536, isPowerOfFour(-65536))
+
+	var s = Salutation{"Bob", "Hello"}
+	greet(s)
 }

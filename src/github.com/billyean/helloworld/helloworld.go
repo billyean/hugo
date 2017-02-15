@@ -6,8 +6,8 @@ import (
 
 const (
 	message = "你好，%s, %d!\n"
-	name    = "严海波"
-	name2   = iota
+	name = "严海波"
+	name2 = iota
 	name3
 )
 
