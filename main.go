@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-import "array"
+import "github.com/billyean/array"
 
 func demoBool() {
 	var message = "Hello Tristan...\t"

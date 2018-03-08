@@ -2,7 +2,7 @@ package functions
 
 import (
 	"testing"
-	"function"
+	"github.com/billyean/function"
 )
 
 
