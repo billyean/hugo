@@ -1,8 +1,8 @@
-package functions
+package function
 
 import (
 	"testing"
-	"github.com/billyean/function"
+	"function"
 )
 
 
@@ -21,5 +21,19 @@ func TestIsPowerOfFour(t *testing.T) {
 
 	if !function.IsPowerOfFour(-65536) {
 		t.Errorf("-65536 should be power of 4.")
+	}
+}
+
+func TestAbs(t *testing.T) {
+	if function.Abs(-1) != 1 {
+		t.Errorf("Abs(-1) is expected to 1 but actual is %d.", function.Abs(-1))
+	}
+
+	if function.Abs(0) != 0 {
+		t.Errorf("Abs(0) is expected to 0 but actual is %d.", function.Abs(0))
+	}
+
+	if function.Abs(1) != 1 {
+		t.Errorf("Abs(1) is expected to 1 but actual is %d.", function.Abs(1))
 	}
 }

@@ -2,7 +2,7 @@ package array
 
 import (
 	"testing"
-	"github.com/billyean/array"
+	"array"
 )
 
 func TestCount(t *testing.T) {

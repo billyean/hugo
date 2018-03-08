@@ -1,9 +1,6 @@
-package main
+package util
 
-import "fmt"
-
-
-func getPrefix() map[string]string {
+func GetPrefix() map[string]string {
 	//var nameWithPrefix map[string]string
 	//nameWithPrefix = make(map[string]string)
 	//nameWithPrefix["Tristan"] = "Mr"
@@ -34,15 +31,4 @@ func getPrefix() map[string]string {
 
 
 	return nameWithPrefix
-}
-
-func main() {
-	nameWithPrefix := getPrefix()
-
-	if _, exists := nameWithPrefix["JohnDoe"]; exists {
-		nameWithPrefix["JohnDoe"] = "Mr"
-	} else {
-		nameWithPrefix["JohnDoe"] = "Unknown"
-	}
-	fmt.Println(nameWithPrefix["JohnDoe"])
 }

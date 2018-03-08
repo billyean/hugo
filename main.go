@@ -1,7 +1,10 @@
 package main
 
-import "fmt"
-import "github.com/billyean/array"
+import (
+	"fmt"
+	"array"
+	"channel"
+)
 
 func demoBool() {
 	var message = "Hello Tristan...\t"
@@ -10,6 +13,20 @@ func demoBool() {
 
 	var say *string = &message
 	fmt.Print("\n", *say)
+}
+
+func channelWork() {
+	wordsChannel := make(chan string)
+	intsChannel := make(chan int)
+	go channel.RandInts(intsChannel)
+	go channel.Emit(wordsChannel)
+	for word := range wordsChannel {
+		fmt.Printf("%s ", word)
+	}
+	fmt.Printf("\n")
+	for num := range intsChannel {
+		fmt.Printf("%d\n", num)
+	}
 }
 
 func main() {
