@@ -1,4 +1,4 @@
-package main
+package function
 
 import (
 	"fmt"
@@ -9,7 +9,7 @@ type Salutation struct {
     greeting string
 }
 
-func greet(salutation Salutation) {
+func Greet(salutation Salutation) {
 	fmt.Printf("%s %s", salutation.greeting, salutation.name)
 }
 
@@ -18,7 +18,7 @@ func greet(salutation Salutation) {
 // worth to be added since it's too generic.
 // This won't make GO a better language than C++ because we need
 // re-invent the wheel all the time.
-func abs(v int) int {
+func Abs(v int) int {
 	if v >= 0 {
 		return v
 	} else {
@@ -28,22 +28,17 @@ func abs(v int) int {
 
 // LeetCode exercise : power of 4 is a trick function
 // https://leetcode.com/problems/power-of-four/
-func isPowerOfFour(v int) string{
-	v1 := abs(v)
-	yes := v1 & (v1 - 1) == 0 && (v1 - 1) % 3 == 0
-	yes_or_not := ""
-	if !yes {
-		yes_or_not = "not "
-	}
-	return yes_or_not
+func IsPowerOfFour(v int) bool{
+	v1 := Abs(v)
+	return v1 & (v1 - 1) == 0 && (v1 - 1) % 3 == 0
 }
 
-func main() {
-	fmt.Printf("%d is %spower of four\n", 5, isPowerOfFour(5))
-	fmt.Printf("%d is %spower of four\n", 16, isPowerOfFour(16))
-	fmt.Printf("%d is %spower of four\n", 32, isPowerOfFour(32))
-	fmt.Printf("%d is %spower of four\n", -65536, isPowerOfFour(-65536))
-
-	var s = Salutation{"Bob", "Hello"}
-	greet(s)
-}
+//func main() {
+//	fmt.Printf("%d is %spower of four\n", 5, IsPowerOfFour(5))
+//	fmt.Printf("%d is %spower of four\n", 16, isPowerOfFour(16))
+//	fmt.Printf("%d is %spower of four\n", 32, isPowerOfFour(32))
+//	fmt.Printf("%d is %spower of four\n", -65536, isPowerOfFour(-65536))
+//
+//	var s = Salutation{"Bob", "Hello"}
+//	greet(s)
+//}

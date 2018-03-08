@@ -1,10 +1,9 @@
-package main
+package method
 
 import (
 	"fmt"
 )
 
-import "../intf"
 
 type QE struct {
 	name string
@@ -45,15 +44,15 @@ func (qe QE) changeDept(newDept string) {
 }
 
 
-func main() {
-    tristan := QE{
-		"Tristan Yan",
-		"Go",
-		"finance",
-	}
-
-	tristan.progHello()
-	tristan.changeDept("IDEA")
-
-	fmt.Println("I work for " + tristan.dept)
-}
+//func main() {
+//    tristan := QE{
+//		"Tristan Yan",
+//		"Go",
+//		"finance",
+//	}
+//
+//	tristan.progHello()
+//	tristan.changeDept("IDEA")
+//
+//	fmt.Println("I work for " + tristan.dept)
+//}
