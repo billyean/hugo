@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"array"
-	"channel"
+	"github.com/hugo/src/array"
+	"github.com/hugo/src/channel"
 )
 
 func demoBool() {
